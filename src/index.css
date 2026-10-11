@@ -1,0 +1,460 @@
+:root {
+    --rsp-navy: #001631;
+    --rsp-dark-blue: #00264d;
+    --rsp-blue: #06345f;
+
+    --rsp-gold: #d99a16;
+    --rsp-light-gold: #f5b82e;
+    --rsp-dark-gold: #b77a00;
+
+    --rsp-white: #ffffff;
+    --rsp-light: #f4f5f7;
+    --rsp-light-gray: #e5e7eb;
+
+    --rsp-gray: #667085;
+    --rsp-dark-gray: #344054;
+
+    --rsp-text: #172033;
+    --rsp-heading: #0b1f3a;
+}
+
+
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--rsp-text);
+    background: var(--rsp-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ================================
+   TOP CONTACT BAR
+================================ */
+
+.rsp-topbar {
+    background: var(--rsp-navy);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+}
+
+.rsp-topbar-inner {
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rsp-contact-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.rsp-contact-info span,
+.rsp-location {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.rsp-topbar i {
+    color: var(--rsp-light-gold);
+}
+
+
+/* ================================
+   MAIN HEADER
+================================ */
+
+.rsp-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: var(--rsp-white);
+
+    border-bottom: 1px solid var(--rsp-light-gray);
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.rsp-header .navbar {
+    min-height: 82px;
+}
+
+
+/* ================================
+   BRAND
+================================ */
+
+.rsp-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--rsp-navy) !important;
+
+    font-weight: 800;
+}
+
+.rsp-brand-main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 64px;
+    height: 48px;
+
+    padding: 0 10px;
+
+    background: var(--rsp-navy);
+
+    color: var(--rsp-light-gold);
+
+    font-size: 22px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    border-radius: 3px;
+}
+
+.rsp-brand-sub {
+    color: var(--rsp-heading);
+
+    font-size: 17px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.rsp-header .nav-link {
+    position: relative;
+
+    margin: 0 7px;
+    padding: 29px 8px !important;
+
+    color: var(--rsp-dark-gray);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.25s ease;
+}
+
+.rsp-header .nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    right: 8px;
+    bottom: 19px;
+
+    height: 2px;
+
+    background: var(--rsp-gold);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.25s ease;
+}
+
+.rsp-header .nav-link:hover,
+.rsp-header .nav-link.active {
+    color: var(--rsp-navy);
+}
+
+.rsp-header .nav-link:hover::after,
+.rsp-header .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+
+/* ================================
+   GET QUOTE
+================================ */
+
+.rsp-quote-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 12px 20px;
+
+    background: var(--rsp-gold);
+
+    color: var(--rsp-navy) !important;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    border-radius: 3px;
+
+    transition: all 0.25s ease;
+}
+
+.rsp-quote-btn:hover {
+    background: var(--rsp-light-gold);
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   MOBILE TOGGLER
+================================ */
+
+.rsp-toggler {
+    padding: 8px 11px;
+
+    border: 1px solid var(--rsp-light-gray) !important;
+
+    color: var(--rsp-navy);
+
+    font-size: 25px;
+
+    box-shadow: none !important;
+}
+
+.rsp-toggler:focus {
+    box-shadow: none !important;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.rsp-start {
+    min-height: calc(100vh - 120px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    color: var(--rsp-white);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rsp-navy),
+            var(--rsp-dark-blue)
+        );
+}
+
+.rsp-label {
+    margin-bottom: 18px;
+
+    color: var(--rsp-light-gold);
+
+    font-size: 64px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.rsp-start h1 {
+    margin-bottom: 20px;
+
+    color: var(--rsp-white);
+
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.rsp-description {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   HERO BUTTONS
+================================ */
+
+.rsp-btn-primary {
+    padding: 13px 28px;
+
+    border: 2px solid var(--rsp-gold);
+
+    background: var(--rsp-gold);
+    color: var(--rsp-navy);
+
+    font-weight: 700;
+
+    border-radius: 4px;
+
+    transition: all 0.25s ease;
+}
+
+.rsp-btn-primary:hover {
+    background: var(--rsp-light-gold);
+    border-color: var(--rsp-light-gold);
+
+    color: var(--rsp-navy);
+
+    transform: translateY(-2px);
+}
+
+.rsp-btn-outline {
+    padding: 13px 28px;
+
+    border: 2px solid rgba(255, 255, 255, 0.75);
+
+    color: var(--rsp-white);
+
+    font-weight: 700;
+
+    border-radius: 4px;
+
+    transition: all 0.25s ease;
+}
+
+.rsp-btn-outline:hover {
+    background: var(--rsp-white);
+
+    color: var(--rsp-navy);
+
+    border-color: var(--rsp-white);
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 991px) {
+
+    .rsp-start h1 {
+        font-size: 50px;
+    }
+
+    .rsp-header .navbar {
+        min-height: 70px;
+    }
+
+    .rsp-header .navbar-collapse {
+        padding: 15px 0 20px;
+    }
+
+    .rsp-header .nav-link {
+        margin: 0;
+        padding: 11px 0 !important;
+    }
+
+    .rsp-header .nav-link::after {
+        display: none;
+    }
+
+    .rsp-header .nav-link.active {
+        color: var(--rsp-gold);
+    }
+
+    .rsp-quote-btn {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 575px) {
+
+    .rsp-topbar {
+        display: none;
+    }
+
+    .rsp-header .navbar {
+        min-height: 65px;
+    }
+
+    .rsp-brand-main {
+        min-width: 55px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+    .rsp-brand-sub {
+        font-size: 14px;
+    }
+
+    .rsp-start {
+        min-height: calc(100vh - 65px);
+        padding: 50px 20px;
+    }
+
+    .rsp-start h1 {
+        font-size: 34px;
+    }
+
+    .rsp-label {
+        font-size: 13px;
+        letter-spacing: 2.5px;
+    }
+
+    .rsp-description {
+        font-size: 16px;
+    }
+
+    .rsp-start .d-flex {
+        flex-direction: column;
+    }
+
+    .rsp-start .btn {
+        width: 100%;
+    }
+}
